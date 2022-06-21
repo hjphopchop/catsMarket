@@ -6,8 +6,8 @@
     border-bottom: 4px solid rgba($color, $alpha: 1);
     background: linear-gradient(
       -45deg,
-      white 0%,
-      white 94%,
+      rgba(242, 242, 242, 1) 0%,
+      rgba(242, 242, 242, 1) 94%,
       $color 94%,
       $color 95%,
       rgba(0, 0, 0, 0) 95%,
@@ -37,4 +37,6 @@
       background-color: $color;
       border-radius: 5px 0px 0px 10px;
     }
+
+    
 }
