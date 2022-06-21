@@ -1,0 +1,40 @@
+@mixin border-theme($color) {
+    box-sizing: border-box;
+    border-left: 4px solid rgba($color, $alpha: 0);
+    border-top: 4px solid rgba($color, $alpha: 0);
+    border-right: 4px solid rgba($color, $alpha: 1);
+    border-bottom: 4px solid rgba($color, $alpha: 1);
+    background: linear-gradient(
+      -45deg,
+      white 0%,
+      white 94%,
+      $color 94%,
+      $color 95%,
+      rgba(0, 0, 0, 0) 95%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background-repeat: no-repeat;
+    border-radius: 12px;
+
+    color: black;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 274px;
+      top: -2px;
+      right: -1px;
+      background-color: $color;
+      border-radius: 5px 5px 0 0px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 435px;
+      width: 4px;
+      bottom: -2px;
+      left: -1px;
+      background-color: $color;
+      border-radius: 5px 0px 0px 10px;
+    }
+}

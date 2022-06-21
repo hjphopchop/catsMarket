@@ -1,0 +1,112 @@
+@import "../utils/border";
+
+.card__item {
+    
+  width: 320px;
+  height: 480px;
+  margin: 20px 40px;
+  position: relative;
+  @include border-theme($color: #1698d9);
+  .card__content {
+    text-align: left;
+    padding-left:45px
+  }
+  &-disabled {
+    position: relative;
+
+    @include border-theme($color: gray);
+    .card__content {
+      opacity: 0.6;
+    }
+  }
+
+  &-active {
+    @include border-theme($color: #e62e7a);
+
+    &:not([disabled]):hover {
+      .card__header {
+        display: none;
+      }
+      .card__header-hover {
+        font-size: 1.1rem;
+    line-height: 18.58px;
+    font-weight: 400;
+        display: block;
+        color: #e62e7a;
+        padding-top: 21px;
+      }
+    }
+  }
+  .card__header{
+    font-size: 1.1rem;
+    line-height: 18.58px;
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+    padding-top: 21px;
+  }
+  .card__header-hover {
+    display: none;
+  }
+  .card__title{
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 55.73px;
+    padding-top: 5px;
+  }
+  .card__taste{
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 28px;
+    padding-top: 3px;
+    padding-bottom: 15px;
+  }
+
+  .card__points{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 0;
+    color: rgba(102, 102, 102, 1);
+    padding-bottom: 3px;
+    
+  }
+
+  .card__weight {
+    background-color: #1698d9;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 2;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    &-active {
+      background-color: red;
+    }
+    &-disabled {
+      background-color: rgba(164, 138, 138, 1);
+      
+    }
+    &-kg{
+        font-size: 1.5rem;
+    }
+  }
+  .card__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

@@ -1,70 +1,55 @@
 @import "./variables";
 @import-normalize;
+@import "./components/Card";
+
+
+@font-face {
+  font-family: "trebuchetms";
+  src: url("../assets/fonts/trebuchetms.ttf");
+}
+@font-face {
+  font-family: "Exo2";
+  src: url("../assets/fonts/Exo2-Thin.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+font-size: 14px;
+
+box-sizing: border-box;
 
 body {
+  
+  font-family: "trebuchetms";
   background-image: url("../assets/img/Pattern.png");
   text-align: center;
   color: white;
-}
+  
 
-.wrapper {
-  width: calc(100vw - 12%);
-  margin: 6% auto;
-
-  .card__items {
+  .wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 95vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    .card__item {
-      background-color: white;
-      width: 320px;
-      height: 509px;
-      position: relative;
-      border: 5px solid #1698d9;
-      color: black;
-      &:disabled {
-        border: 5px solid gray;
-      }
-      &-active {
-        border: 5px solid red;
+    align-items: center;
 
-        &:not([disabled]):hover {
-          .card__header {
-            display: none;
-          }
-          .card__header-hover {
-            display: block;
-            color: #e62e7a;
-          }
-        }
-      }
-      .card__header-hover {
-        display: none;
+    .content {
+      .main__title {
+        font-family: "Exo2";
+        font-size: 2.6rem;
+        padding-bottom: 25px;
       }
 
-      .card__weight {
-        background-color: #1698d9;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-radius: 50%;
-        text-align: center;
-        &-active {
-          background-color: red;
-        }
-      }
-      .card__img {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        img {
-          width: 100%;
-          height: auto;
-          display: block;
-        }
+      .card__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
       }
     }
   }
+}
 }
