@@ -33,6 +33,7 @@ const Card = ({
         disabled={isDisableCard}
         onMouseLeave={leave}
         className={classNames("card__item", {
+          "card__item-base": !isActive,
           "card__item-active": isActive,
           "card__item-disabled": !isStock,
         })}

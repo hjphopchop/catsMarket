@@ -5,10 +5,12 @@
   height: 480px;
   margin: 20px 40px;
   position: relative;
-  @include border-theme($color: $blue);
 
-  .card__item:hover {
-    @include border-theme($color: $blueHover);
+  &-base {
+    @include border-theme($color: $blue);
+    &:hover {
+      @include border-theme($color: $blueHover);
+    }
   }
 
   .card__content {
